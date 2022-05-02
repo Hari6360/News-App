@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			#navbar {
+				height: 100px;
+				width: 90%;
+				border: 1px solid red;
+				/* margin: auto; */
+				margin-left: 10%;
+				background-color: darkgray;
+			}
+			#search_input {
+				width: 60%;
+				margin-left: 20%;
+				margin-top: 3%;
+				height: 50px;
+			}
+			#sidebar {
+				width: 9%;
+				margin-top: -7%;
+				display: grid;
+				/* gap: 5px; */
+				background-color: darkgray;
+				height: 700px;
+			}
+			#sidebar :nth-child(1) {
+				text-align: center;
+				margin-top: 20%;
+				font-size: larger;
+			}
+			#in,
+			#ch,
+			#us,
+			#uk,
+			#nz {
+				text-align: center;
+				/* font-size: larger; */
+				height: 30px;
+			}
+			#results {
+				width: 90%;
+				display: grid;
+				gap: 5px;
+				margin-left: 10%;
+				/* margin-bottom: 50%; */
+				margin-top: -35%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav id="navbar">
+			<input
+				type="text"
+				id="search_input"
+				placeholder="Search News"
+				onkeypress="searchNews(e)"
+			/>
+		</nav>
+
+		<div id="sidebar">
+			<a href="index.html"> <div>News App</div> </a>
+			<br /><br /><br /><br /><br />
+			<button id="in" onclick="ind()">India</button>
+			<button id="ch" onclick="ch()">China</button>
+			<button id="us" onclick="us()">USA</button>
+			<button id="uk" onclick="uk()">UK</button>
+			<button id="nz" onclick="nz()">Newzeland</button>
+		</div>
+		<div id="results">
+			<div class="news"></div>
+		</div>
+	</body>
+</html>
+<script src="/scripts/index.js"></script>
